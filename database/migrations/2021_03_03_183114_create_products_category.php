@@ -30,6 +30,6 @@ class CreateProductsCategory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produtos_categoria');
+        Schema::dropIfExists('produtos_categorias');
     }
 }
