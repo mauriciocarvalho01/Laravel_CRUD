@@ -87,16 +87,70 @@
                     <thead class="text-warning">
                       <th>ID</th>
                       <th>Nome</th>
-                      <th>Marca</th>
-                      <th>Categoria</th>
+                      <th>Especificação</th>
+                      <th>Status</th>
                     </thead>
                     <tbody>
+                    @foreach($produto as $prod)
                       <tr>
-                        <td>1</td>
-                        <td>Dakota Rice</td>
-                        <td>$36,738</td>
-                        <td>Niger</td>
+                        <td>{{$prod->id}}</td>
+                        <td>{{$prod->nome}}</td>
+                        <td>{{$prod->especificacao}}</td>
+                        <td>{{$prod->status}}</td>
                       </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title">Categorias</h4>
+                  <p class="card-category">Categorias de produtos em estoque</p>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-hover">
+                    <thead class="text-warning">
+                      <th>ID</th>
+                      <th>Descrição</th>
+                      <th>Status</th>
+                    </thead>
+                    <tbody>
+                    @foreach($categoria as $cat)
+                      <tr>
+                        <td>{{$cat->id}}</td>
+                        <td>{{$cat->descricao}}</td>
+                        <td>{{$cat->status}}</td>
+                      </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title">Marcas</h4>
+                  <p class="card-category">Marcas de produtos em estoque</p>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-hover">
+                    <thead class="text-warning">
+                      <th>ID</th>
+                      <th>Descrição</th>
+                      <th>Status</th>
+                    </thead>
+                    <tbody>
+                    @foreach($marca as $marc)
+                      <tr>
+                        <td>{{$marc->id}}</td>
+                        <td>{{$marc->descricao}}</td>
+                        <td>{{$marc->status}}</td>
+                      </tr>
+                      @endforeach
                     </tbody>
                   </table>
                 </div>

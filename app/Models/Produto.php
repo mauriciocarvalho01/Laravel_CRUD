@@ -15,7 +15,7 @@ class Produto extends Model
         "status"
     ]; 
     public function marca(){
-        return $this->hasMany(Marca::class); 
+        return $this->hasOne(Marca::class, 'id', 'marca_id'); 
     }
 
     public function categoria(){

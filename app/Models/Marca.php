@@ -14,4 +14,8 @@ class Marca extends Model
         "descrição",
         "status",
     ];
+
+    public function produto(){
+        return $this->belongsTo(Produto::class, 'id'); 
+    }
 }

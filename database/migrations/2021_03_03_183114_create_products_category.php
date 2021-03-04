@@ -13,7 +13,7 @@ class CreateProductsCategory extends Migration
      */
     public function up()
     {
-        Schema::create('produtos_categorias', function (Blueprint $table) {
+        Schema::create('categoria_produto', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->bigInteger('produto_id')->unsigned();
             $table->foreign('produto_id')->references('id')->on('produto')
@@ -30,6 +30,6 @@ class CreateProductsCategory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produtos_categorias');
+        Schema::dropIfExists('categoria_produto');
     }
 }

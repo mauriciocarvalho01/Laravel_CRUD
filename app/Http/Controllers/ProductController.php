@@ -6,6 +6,7 @@ use App\Models\Categoria;
 use App\Models\Marca;
 use App\Models\Produto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -29,10 +30,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
-        // return view('index');
-
-        dd($this->objProduto->all());
+        
+        $produto = $this->objProduto->all();
+        $categoria = $this->objCategoria->all();
+        $marca = $this->objMarca->all(); 
+        return view('produtos', compact('produto', 'categoria', 'marca'));
     }
 
     /**
