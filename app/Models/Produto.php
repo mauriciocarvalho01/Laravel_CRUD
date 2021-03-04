@@ -2,24 +2,29 @@
 
 namespace App\Models;
 
+use App\Models\Categoria;
+use App\Models\Marca;
 use Illuminate\Database\Eloquent\Model;
 
 class Produto extends Model
 {
     //
     protected $table = 'produto';
-    protected $fillble = [
+    protected $fillable = [
         "id",
         "nome",
         "especificacao",
-        "status"
-    ]; 
-    public function marca(){
-        return $this->hasOne(Marca::class, 'id', 'marca_id'); 
+        "status",
+        "marca_id",
+    ];
+    public function marca()
+    {
+        return $this->hasOne(Marca::class, 'id', 'marca_id');
     }
 
-    public function categoria(){
-        return $this->belongsToMany(Categoria::class); 
+    public function categoria()
+    {
+        return $this->belongsToMany(Categoria::class);
     }
-    
+
 }

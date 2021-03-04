@@ -7,12 +7,10 @@ use App\Models\Marca;
 use App\Models\Produto;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
 
-    private $objProduto;
     private $objCategoria;
-    private $objMarca;
 
     public function __construct()
     {
@@ -30,10 +28,8 @@ class ProductController extends Controller
     public function index()
     {
 
-        $produto = $this->objProduto->all();
         $categoria = $this->objCategoria->all();
-        $marca = $this->objMarca->all();
-        return view('produtos', compact('produto', 'categoria', 'marca'));
+        return view('categorias', compact('categoria'));
     }
 
     /**
@@ -43,12 +39,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categoria = $this->objCategoria->all();
-        $marca = $this->objMarca->all();
-        $categoria_padrao = $this->objCategoria->find(1);
-        $marca_padrao = $this->objMarca->find(1);
-
-        return view('create_produto', compact('categoria', 'marca', 'categoria_padrao', 'marca_padrao'));
+        //
     }
 
     /**
@@ -59,12 +50,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $this->objProduto->create([
-            'nome' => $request->nome,
-            'especificacao' => $request->especificacao,
-            'status' => $request->status,
-            'marca_id' => $request->marca_id,
-        ]);
+        //
     }
 
     /**
@@ -75,11 +61,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $produto = $this->objProduto->find($id);
-        $produto_marca = $this->objProduto->find($id)->marca;
-        $produto_categoria = $this->objProduto->find($id)->categoria;
-
-        return view("show_produto", compact('produto', 'produto_marca', 'produto_categoria'));
+        //
     }
 
     /**

@@ -12,10 +12,10 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
+          <li class="nav-item active">
             <a class="nav-link" href="./dashboard.html">
               <i class="material-icons">dashboard</i>
-              <p>Todos Produtos</p>
+              <p>Marcas</p>
             </a>
           </li>
         </ul>
@@ -78,40 +78,41 @@
           <div class="row">
             <div class="col-lg-12 col-md-12">
               <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title">Produtos</h4>
-                  <p class="card-category">Produtos em estoque</p>
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title">Marcas</h4>
+                  <p class="card-category">Marcas de produtos em estoque</p>
                 </div>
                 <div class="card-body table-responsive">
                   <table class="table table-hover">
-                    <thead class="text-primary">
+                    <thead class="text-warning">
                       <th>ID</th>
-                      <th>Nome</th>
+                      <th>Descrição</th>
                       <th>Status</th>
                       <th></th>
                     </thead>
                     <tbody>
-                    @foreach($produto as $prod)
+                    @foreach($marca as $marc)
                       <tr>
-                        <td>{{$prod->id}}</td>
-                        <td>{{$prod->nome}}</td>
-                        <td>{{$prod->status}}</td>
+                        <td>{{$marc->id}}</td>
+                        <td>{{$marc->descricao}}</td>
+                        <td>{{$marc->status}}</td>
                         <td>
-                        <a href="{{url("produtos/$prod->id")}}">
+                        <a href="{{url("marcas/$marc->id")}}">
                           <span class="material-icons">
                                 visibility
                           </span>
-                          <a href="{{url("produtos/adicionar")}}">
+                        </a>
+                        <a href="">
                           <span class="material-icons">
                           add_circle
                           </span>
                         </a>
-                        <a href="{{url("produtos/alterar/$prod->id")}}">
+                        <a href="">
                           <span class="material-icons">
                           mode
                           </span>
                         </a>
-                        <a href="{{url("produtos/deletar/$prod->id")}}">
+                        <a href="">
                         <span class="material-icons">
                             delete
                         </span>
@@ -119,9 +120,6 @@
                         </td>
                       </tr>
                       @endforeach
-                      @if(!$produto)
-                      <td><p>Nenhum produto encontrado!</p></td>
-                      @endif
                     </tbody>
                   </table>
                 </div>
