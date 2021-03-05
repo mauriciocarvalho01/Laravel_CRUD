@@ -7,61 +7,27 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p> -->
 
-## Sobre o Commodity Laravel CRUD
+### Sobre o Commodity Laravel CRUD
 
 Essa aplicação foi desenvolvida para testar o Framework Laravel e seu ecossistema MVC.
 Segue abaixo algumas especificações do CRUD.
 
 <!-- Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as: -->
 
-## Meus projetos criados para aprendizagem de linguagens.
+## Telas:
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
-    -- [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Especificações:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   [Banco de dados: Mysql](https://www.mysql.com/).
+-   [Controle de versão do banco: Migrations](https://github.com/mauriciocarvalho01/Laravel_CRUD/tree/main/database/migrations).
+-   [Mapeador objeto-relacional (ORM): ORM Eloquent](https://github.com/mauriciocarvalho01/Laravel_CRUD/tree/main/app/Models).
+-   [Templates: Blade Template](https://github.com/mauriciocarvalho01/Laravel_CRUD/tree/main/resources/views).
+-   [Mais](https://github.com/mauriciocarvalho01/Laravel_CRUD).
 
-## Learning Laravel
+## Outros projetos relacionados
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
--   **[Vehikl](https://vehikl.com/)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Cubet Techno Labs](https://cubettech.com)**
--   **[Cyber-Duck](https://cyber-duck.co.uk)**
--   **[Many](https://www.many.co.uk)**
--   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
--   **[DevSquad](https://devsquad.com)**
--   **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   [Front-End: react-SPA (Single Page Application)](https://github.com/mauriciocarvalho01/react-SPA).
+-   [Front-End, Backend: Explain (Protótipo criado com Next.js, React.Js, Node.js, Bootstrap)](https://github.com/mauriciocarvalho01/Explain).
+-   [Front-End, Backend: Whatsapp_Web_Plugin (Plugin criado para acelerar audios do Whatsapp Web)](https://github.com/mauriciocarvalho01/Whatsapp_Web_Plugin).
+-   [Front-End, Backend: Protótipo criado com PHP e Materialize para estudar a matéria de banco de dados do 6º semestre CC](https://github.com/mauriciocarvalho01/CRUD_BASE_XPTO).
+-   [Mais](https://github.com/mauriciocarvalho01?tab=repositories).
