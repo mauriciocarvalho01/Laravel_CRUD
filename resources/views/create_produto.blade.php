@@ -116,7 +116,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                         <select name="marca_id" id="marca_id" class="form-control custom-select" aria-label="Marca" required>
-                          <option selected>{{$marca_padrao->descricao}}</option>
+                          <option value="{{"$marca_padrao->id"}}" selected>{{$marca_padrao->descricao}}</option>
                           @foreach($marca as $marc)
                           <option value="{{"$marc->id"}}">{{$marc->descricao}}</option>
                           @endforeach
@@ -126,7 +126,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                         <select name="categoria_id" id="categoria_id" class="form-control custom-select" aria-label="Categoria" required>
-                          <option selected>{{$categoria_padrao->descricao}}</option>
+                          <option value="{{"$categoria_padrao->id"}}" selected>{{$categoria_padrao->descricao}}</option>
                           @foreach($categoria as $cat)
                           <option value="{{"$cat->id"}}">{{$cat->descricao}}</option>
                           @endforeach

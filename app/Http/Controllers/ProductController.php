@@ -59,12 +59,18 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $this->objProduto->create([
+
+        $produto_inserido = $this->objProduto->create([
             'nome' => $request->nome,
             'especificacao' => $request->especificacao,
             'status' => $request->status,
             'marca_id' => $request->marca_id,
         ]);
+
+        $produto = $this->objProduto->findOrFail($produto_inserido->id);
+        
+        $this->objCategoria->produto()->attach(['produto_id' => $produto->id], ['categoria_id' => $request->categoria_id]);
+        
     }
 
     /**
