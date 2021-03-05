@@ -17,8 +17,9 @@ Route::get('/produtos', 'ProductController@index');
 Route::get('/produtos/adicionar', 'ProductController@create');
 Route::post('/produtos/adicionar', 'ProductController@store');
 Route::get('/produtos/{id}', 'ProductController@show');
-Route::post('/produtos/{id}/alterar', 'ProductController@update');
-Route::post('/produtos/{id}/deletar', 'ProductController@destroy');
+Route::get('/produtos/{id}/alterar', 'ProductController@edit');
+Route::put('/produtos/{id}', 'ProductController@update');
+Route::delete('/produtos/{id}', 'ProductController@destroy');
 
 //Marcas
 Route::get('/marcas', 'MarkController@index');

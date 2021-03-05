@@ -68,9 +68,11 @@ class ProductController extends Controller
         ]);
 
         $produto = $this->objProduto->findOrFail($produto_inserido->id);
-        
+
         $this->objCategoria->produto()->attach(['produto_id' => $produto->id], ['categoria_id' => $request->categoria_id]);
-        
+
+        return redirect('/produtos/adicionar');
+
     }
 
     /**
@@ -96,7 +98,19 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $produto = $this->objProduto->find($id);
+        $produto_marca = $this->objProduto->find($produto->marca_id)->marca;
+        $produto_categoria = $this->objProduto->find($id)->categoria;
+        $categoria = $this->objCategoria->all();
+        $marca = $this->objMarca->all();
+
+        // dd($produto);
+        // dd($produto_marca);
+        // dd($produto_categoria[0]);
+        // dd($categoria);
+        // dd($marca);
+
+        return view("update_produto", compact('produto', 'produto_marca', 'produto_categoria', 'categoria', 'marca'));
     }
 
     /**
@@ -109,6 +123,16 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $produto_alterado = $this->objProduto->where(['id' => $id])->update([
+            'nome' => $request->nome,
+            'especificacao' => $request->especificacao,
+            'status' => $request->status,
+            'marca_id' => $request->marca_id,
+        ]);
+        $this->objProduto->categoria()->detach(2);
+        $this->objCategoria->produto()->attach(['produto_id' => $id], ['categoria_id' => $request->categoria_id]);
+
+        return redirect("/produtos/$id");
     }
 
     /**
@@ -120,5 +144,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+        $del = $this->objProduto->destroy($id);
+        return ($del) ? "Sim" : "Não";
     }
 }
