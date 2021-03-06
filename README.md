@@ -16,6 +16,24 @@ Segue abaixo algumas especificações do CRUD.
 
 ## Telas:
 
+## Produtos:
+<p align="center"><a href="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fprodutos.png?alt=media&token=fa342609-a96c-4c90-a13a-67ad45a111ac" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fprodutos.png?alt=media&token=fa342609-a96c-4c90-a13a-67ad45a111ac" width="400"></a></p>
+
+## Visualizar Produto:
+<p align="center"><a href="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fvisualiza_prod.png?alt=media&token=944801f7-57fd-40e7-badb-64e0d8c21f2e" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fvisualiza_prod.png?alt=media&token=944801f7-57fd-40e7-badb-64e0d8c21f2e" width="400"></a></p>
+
+## Editar Produto:
+<p align="center"><a href="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fedit_prod.png?alt=media&token=093ee3ed-973c-4bac-8b06-7f8da2566b2e" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fedit_prod.png?alt=media&token=093ee3ed-973c-4bac-8b06-7f8da2566b2e" width="400"></a></p>
+
+## Deletar Produto:
+<p align="center"><a href="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fdelete_prod.png?alt=media&token=9e9b2815-9240-42fd-9dce-6c604294be0a" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fdelete_prod.png?alt=media&token=9e9b2815-9240-42fd-9dce-6c604294be0a" width="400"></a></p>
+
+## Marcas:
+<p align="center"><a href="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fmarca.png?alt=media&token=b2cdd23a-1051-443c-ae59-d8c2ba71a34d" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fmarca.png?alt=media&token=b2cdd23a-1051-443c-ae59-d8c2ba71a34d" width="400"></a></p>
+
+## Categorias:
+<p align="center"><a href="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fcategoria.png?alt=media&token=3c98ec13-4d36-4f56-86f1-379c9e6768b5" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/expex-importadora-eada4.appspot.com/o/images%2Fcategoria.png?alt=media&token=3c98ec13-4d36-4f56-86f1-379c9e6768b5" width="400"></a></p>
+
 ## Especificações:
 
 -   [Banco de dados: Mysql](https://www.mysql.com/).

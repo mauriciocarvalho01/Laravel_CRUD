@@ -41,14 +41,14 @@
                           </span>
                         </a>
                         <a href="{{url("produtos/$prod->id")}}">
-                        <span class="material-icons">
+                        <span class="material-icons js-del">
                             delete
                         </span>
                         </a>
                         </td>
                       </tr>
                       @endforeach
-                      @if(!$produto)
+                      @if(count($produto) == 0)
                       <td><p>Nenhum produto encontrado!</p></td>
                       @endif
                     </tbody>

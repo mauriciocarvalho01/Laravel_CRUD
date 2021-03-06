@@ -105,23 +105,23 @@
           <nav class="float-left">
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
+                <a href="https://laravel.com/">
+                  LARAVEL
                 </a>
               </li>
               <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
+                <a href="https://github.com/mauriciocarvalho01?tab=repositories">
+                  SOBRE O DESENVOLVEDOR
                 </a>
               </li>
               <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
+                <a href="#">
+                  BLOG
                 </a>
               </li>
               <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
+                <a href="#">
+                  LICENÇAS
                 </a>
               </li>
             </ul>
