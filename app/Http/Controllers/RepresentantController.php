@@ -2,26 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categoria;
-use App\Models\Marca;
-use App\Models\Produto;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class RepresentantController extends Controller
 {
-
-    private $objProduto;
-    private $objCategoria;
-    private $objMarca;
-
-    public function __construct()
-    {
-
-        $this->objProduto = new Produto();
-        $this->objCategoria = new Categoria();
-        $this->objMarca = new Marca();
-
-    }
     /**
      * Display a listing of the resource.
      *
@@ -29,9 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-
-        $categoria = $this->objCategoria->all();
-        return view('categorias', compact('categoria'));
+        //
     }
 
     /**

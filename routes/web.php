@@ -12,6 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
  */
+
+ //Clientes
+ //Produtos
+Route::get('/clientes', 'ClientController@index');
+Route::get('/clientes/adicionar', 'ClientController@create');
+Route::post('/clientes/adicionar', 'ClientController@store');
+Route::get('/clientes/{id}', 'ClientController@show');
+Route::get('/clientes/{id}/alterar', 'ClientController@edit');
+Route::put('/clientes/{id}', 'ClientController@update');
+Route::delete('/clientes/{id}', 'ClientController@destroy');
 //Produtos
 Route::get('/produtos', 'ProductController@index');
 Route::get('/produtos/adicionar', 'ProductController@create');

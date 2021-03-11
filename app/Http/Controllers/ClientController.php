@@ -2,24 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categoria;
-use App\Models\Marca;
-use App\Models\Produto;
 use Illuminate\Http\Request;
+use App\Models\Representante; 
+use App\Models\Cliente; 
 
-class CategoryController extends Controller
+class ClientController extends Controller
 {
 
-    private $objProduto;
-    private $objCategoria;
-    private $objMarca;
+    private $objRepresentante;
+    private $objCliente;
+
 
     public function __construct()
     {
 
-        $this->objProduto = new Produto();
-        $this->objCategoria = new Categoria();
-        $this->objMarca = new Marca();
+        $this->objRepresentante = new Representante();
+        $this->objCliente = new Cliente();
 
     }
     /**
@@ -30,8 +28,11 @@ class CategoryController extends Controller
     public function index()
     {
 
-        $categoria = $this->objCategoria->all();
-        return view('categorias', compact('categoria'));
+        $representante = $this->objRepresentante->all();
+        $cliente = $this->objCliente->all();
+
+       // dd($cliente); 
+        return view('clientes', compact('cliente', 'representante'));
     }
 
     /**
@@ -63,7 +64,11 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $cliente = $this->objCliente->find($id);
+        $representante = $this->objCliente->find($id)->representante;
+
+        // dd($representante); 
+        return view("show_cliente", compact('cliente', 'representante'));
     }
 
     /**
@@ -74,7 +79,17 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cliente = $this->objCliente->find($id);
+        $representante = $this->objCliente->find($id)->representante;
+        $representantes = $this->objRepresentante->All();
+
+        // dd($produto);
+        // dd($produto_marca);
+        // dd($produto_categoria[0]);
+        // dd($categoria);
+        // dd($marca);
+
+        return view("update_cliente", compact('cliente', 'representante', 'representantes'));
     }
 
     /**

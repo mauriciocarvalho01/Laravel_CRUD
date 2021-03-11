@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link rel = "stylesheet" href="{{url('assets/material_dashboard/css/material-dashboard.min.css')}}">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <title>Laravel CRUD</title>
+  <title>ERP - ACME</title>
 </head>
 <body>
 <div class="wrapper ">
@@ -22,11 +22,17 @@
         Tip 2: you can also add an image using data-image tag
       -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Commodity Laravel CRUD
+          ERP FAKE
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
+        <li class="nav-item active  ">
+            <a class="nav-link" href="/clientes">
+              <i class="material-icons">corporate_fare</i>
+              <p>Empresas Clientes</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="/produtos">
               <i class="material-icons">dashboard</i>
               <p>Todos Produtos</p>
