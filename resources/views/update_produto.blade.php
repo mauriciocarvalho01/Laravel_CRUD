@@ -54,7 +54,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                         <select name="categoria_id" id="categoria_id" class="form-control custom-select" aria-label="Categoria" required>
-                          <option value="{{"$produto_categoria[0]->id"}}" selected>{{$produto_categoria[0]->descricao}}</option>
+                          <option value="{{"$produto_categoria->id"}}" selected>{{$produto_categoria->descricao}}</option>
                           @foreach($categoria as $cat)
                           <option value="{{"$cat->id"}}">{{$cat->descricao}}</option>
                           @endforeach

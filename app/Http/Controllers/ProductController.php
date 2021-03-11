@@ -33,6 +33,8 @@ class ProductController extends Controller
         $produto = $this->objProduto->all();
         $categoria = $this->objCategoria->all();
         $marca = $this->objMarca->all();
+
+
         return view('produtos', compact('produto', 'categoria', 'marca'));
     }
 
@@ -99,14 +101,14 @@ class ProductController extends Controller
     public function edit($id)
     {
         $produto = $this->objProduto->find($id);
-        $produto_marca = $this->objProduto->find($produto->marca_id)->marca;
-        $produto_categoria = $this->objProduto->find($id)->categoria;
+        $produto_marca = $this->objMarca->find($produto->marca_id);
+        $produto_categoria = $this->objProduto->find($id)->categoria[0];
         $categoria = $this->objCategoria->all();
         $marca = $this->objMarca->all();
 
-        // dd($produto);
         // dd($produto_marca);
-        // dd($produto_categoria[0]);
+        // dd($id);
+        // dd($produto_categoria);
         // dd($categoria);
         // dd($marca);
 
@@ -129,7 +131,8 @@ class ProductController extends Controller
             'status' => $request->status,
             'marca_id' => $request->marca_id,
         ]);
-        $this->objProduto->categoria()->detach(2);
+
+        // dd($request->categoria_id); 
         $this->objCategoria->produto()->attach(['produto_id' => $id], ['categoria_id' => $request->categoria_id]);
 
         return redirect("/produtos/$id");

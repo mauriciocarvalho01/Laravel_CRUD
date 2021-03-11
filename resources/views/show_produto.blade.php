@@ -47,7 +47,7 @@
                           </span>
                         </a>
                         <a href="{{url("produtos/$produto->id")}}">
-                        <span class="material-icons js">
+                        <span class="material-icons js-del">
                             delete
                         </span>
                         </a>
